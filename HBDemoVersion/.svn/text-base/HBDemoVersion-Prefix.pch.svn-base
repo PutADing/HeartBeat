@@ -1,0 +1,26 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
+
+#define NavigationSelectView_Hight 40.0
+
+#define PrintRect(frame) NSLog(@"X:%f,Y:%f,W:%f,H:%f",frame.origin.x,frame.origin.y,frame.size.width,frame.size.height)
+#define DistanceFromTopGuiden(view) (view.frame.origin.y + view.frame.size.height)
+#define DistanceFromLeftGuiden(view) (view.frame.origin.x + view.frame.size.width)
+
+
+#import "HBBaseUI.h"
+#import "HBTool.h"
