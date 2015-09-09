@@ -10,6 +10,10 @@
 #import "HBChatVC.h"
 #import "HBDiscoverVC.h"
 #import "HBShareViewController.h"
+#import "HBRegisterViewController.h"
+#import "HBContactsViewController.h"
+#import "GDataXMLNode.h"
+#import "JSON.h"
 
 @implementation heartbeatAppDelegate
 
@@ -18,28 +22,41 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
+    HBRegisterViewController* registerVC = [[HBRegisterViewController alloc]init];
+    [self.window setRootViewController:registerVC];           //注册
     
+    
+    
+    
+    
+    
+    
+/*
     HBChatVC * chatVC = [[HBChatVC alloc] init];                                //聊天
     HBDiscoverVC * discoverVC = [[HBDiscoverVC alloc] init];                    //发现
     HBShareViewController * shareVC = [[HBShareViewController alloc] init];     //共享
+    HBContactsViewController * contactsVC = [[HBContactsViewController alloc]init];//通讯录
     
     
-//    //聊天
-//    HBBaseNavigationController * chatNavi = [[HBBaseNavigationController alloc] initWithRootViewController:chatVC];
-//    //发现
-//    HBBaseNavigationController * discoverNavi = [[HBBaseNavigationController alloc] initWithRootViewController:discoverVC];
-//    //共享
-//    HBBaseNavigationController * shareNavi = [[HBBaseNavigationController alloc] initWithRootViewController:shareVC];
-//    //设置
+    //聊天
+    HBBaseNavigationController * chatNavi = [[HBBaseNavigationController alloc] initWithRootViewController:chatVC];
+    //发现
+    HBBaseNavigationController * discoverNavi = [[HBBaseNavigationController alloc] initWithRootViewController:discoverVC];
+    //共享
+    HBBaseNavigationController * shareNavi = [[HBBaseNavigationController alloc] initWithRootViewController:shareVC];
+    //设置
 #warning wait to add
     
     HBBaseTabBarController * mainTabBarController = [[HBBaseTabBarController alloc]init];
     [mainTabBarController setViewControllers:@[chatVC,discoverVC,shareVC]];
+    [mainTabBarController setViewControllers:@[shareVC,contactsVC]];
     [mainTabBarController.tabBar setHidden:YES];
     
     HBBaseNavigationController * mainNavi = [[HBBaseNavigationController alloc] initWithRootViewController:mainTabBarController];
     [mainNavi setMyTabBarController:mainTabBarController];
     [self.window setRootViewController:mainNavi];
+*/
+    
     
     [self.window makeKeyAndVisible];
     return YES;

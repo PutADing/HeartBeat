@@ -25,9 +25,16 @@
 #import "HBBaseUI.h"
 #import "HBTool.h"
 
+//心跳吧后台地址   //IP: 121.40.182.96  帐号：root  密码：bfa05fac
+#define HBURL @"http://121.40.182.96:8080/xt8"
+//宏定义 异步请求
+#define postRequestYiBu(argumentStr,urlStr)   NSURL* url = [[NSURL alloc]initWithString:urlStr]; NSMutableURLRequest* request = [[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10]; [request setHTTPMethod:@"POST"]; NSData* data = [argumentStr dataUsingEncoding:NSUTF8StringEncoding]; [request setHTTPBody:data]; [NSURLConnection connectionWithRequest:request delegate:self];
+
+#define postRequestAgency(datas)   -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{datas=[[NSMutableData alloc]init];}-(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data{[datas appendData:data];}-(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{NSLog(@"000000000");}
+
 //融云IM模块的APP Key和APP Secret
-#define rongcloudAppKey pvxdm17jx5v1r
-#define rongcloudAppSecret OzAvYJleunZA
+//#define rongcloudAppKey pvxdm17jx5v1r
+//#define rongcloudAppSecret OzAvYJleunZA
 
 
 

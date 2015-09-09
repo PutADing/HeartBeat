@@ -51,7 +51,7 @@
     
     HBChatMessageBoxContactTimeModel * timeModel1 = [HBChatMessageBoxContactTimeModel messageBoxContactTimeModelWithTiem:@"14:00" Message:@"菜鸟真多……匹配系统找得到真正的平衡么？"];
     HBChatMessageBoxContactTimeModel * timeModel2 = [HBChatMessageBoxContactTimeModel messageBoxContactTimeModelWithTiem:@"15:32" Message:@"我的大刀早已饥渴难耐了。。。"];
-    HBChatMessageBoxContactTimeModel * timeModel3 = [HBChatMessageBoxContactTimeModel messageBoxContactTimeModelWithTiem:@"10-09" Message:@"如果暴力不是为了杀戮，那就毫无意义了"];
+    HBChatMessageBoxContactTimeModel * timeModel3 = [HBChatMessageBoxContactTimeModel messageBoxContactTimeModelWithTiem:@"10:09" Message:@"如果暴力不是为了杀戮，那就毫无意义了"];
     
     HBChatMessageBoxContactModel * model1 = [HBChatMessageBoxContactModel messageBoxContactModelWithUserId:@"" UserNickName:@"阿卡利" Image:image1 TimeModel:timeModel1 UnReadMessageCount:2];
     HBChatMessageBoxContactModel * model2 = [HBChatMessageBoxContactModel messageBoxContactModelWithUserId:@"" UserNickName:@"泰达米尔" Image:image2 TimeModel:timeModel2 UnReadMessageCount:0];
